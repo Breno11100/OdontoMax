@@ -1,0 +1,273 @@
+.usuarios-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.usuarios-header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 2px solid #eee;
+}
+
+.logo {
+  height: 70px;
+}
+
+/* MAIN */
+.usuarios-main {
+  flex: 1;
+  background-color: #a8e6cf;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* LISTA */
+.lista-usuarios {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* CARD */
+.usuario-card {
+  background-color: #f1f2f6;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* INFO */
+.usuario-info {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+/* BOTÃO ATUALIZAR */
+.btn-atualizar {
+  background-color: #00b894;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* AÇÕES */
+.usuarios-acoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.acoes-direita {
+  display: flex;
+  gap: 10px;
+}
+
+/* BOTÕES PADRÃO */
+.btn-nav {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* DASHBOARD */
+.btn-nav {
+  background-color: white;
+  color: #333;
+}
+
+/* ADICIONAR */
+.btn-add {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+}
+
+/* HOVER */
+.btn-nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+.usuarios-footer {
+  background-color: #00695c;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.acoes-usuario {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-excluir {
+  background-color: #d63031;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* =========================
+   OVERLAY PADRÃO
+========================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+/* =========================
+   MODAL PADRÃO
+========================= */
+.modal {
+  background-color: #ffffff;
+  width: 360px;
+  max-width: 90%;
+
+  padding: 25px;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  animation: modalFade 0.25s ease;
+}
+
+/* =========================
+   TÍTULO
+========================= */
+.modal h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #222;
+}
+
+/* =========================
+   INPUTS E SELECTS
+========================= */
+.input {
+  width: 100%;
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 10px 12px;
+
+  border-radius: 10px;
+  border: 1px solid #ddd;
+
+  font-size: 14px;
+
+  outline: none;
+  transition: 0.2s;
+}
+
+.input:focus {
+  border-color: #00b894;
+  box-shadow: 0 0 6px rgba(0, 184, 148, 0.3);
+}
+
+/* =========================
+   LABELS
+========================= */
+.modal label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* =========================
+   BOTÕES DO MODAL
+========================= */
+.modal-acoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+/* CANCELAR */
+.btn-cancelar {
+  flex: 1;
+  background-color: #b2bec3;
+  color: #fff;
+
+  border: none;
+  padding: 10px;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn-cancelar:hover {
+  opacity: 0.8;
+}
+
+/* CONFIRMAR / SALVAR */
+.btn-confirmar {
+  flex: 1;
+
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+
+  border: none;
+  padding: 10px;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.btn-confirmar:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

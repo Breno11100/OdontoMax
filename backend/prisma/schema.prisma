@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model movimentacao {
+  id_movimentacao Int               @id @default(autoincrement())
+  tipo            movimentacao_tipo
+  quantidade      Int
+  data            DateTime          @default(now()) @db.DateTime(0)
+  id_usuario      Int
+  id_produto      Int
+  produto         produto           @relation(fields: [id_produto], references: [id_produto], map: "fk_mov_produto")
+  usuario         usuario           @relation(fields: [id_usuario], references: [id_usuario], map: "fk_mov_usuario")
+
+  @@index([id_produto], map: "fk_mov_produto")
+  @@index([id_usuario], map: "fk_mov_usuario")
+}
+
+model produto {
+  id_produto        Int            @id @default(autoincrement())
+  nome              String         @db.VarChar(100)
+  descricao         String?        @db.Text
+  categoria         String?        @db.VarChar(50)
+  unidade_medida    String?        @db.VarChar(20)
+  quantidade        Int            @default(0)
+  quantidade_minima Int
+  movimentacao      movimentacao[]
+}
+
+model usuario {
+  id_usuario   Int            @id @default(autoincrement())
+  nome         String         @db.VarChar(100)
+  email        String         @unique(map: "email") @db.VarChar(100)
+  senha        String         @db.VarChar(255)
+  perfil       usuario_perfil
+  movimentacao movimentacao[]
+}
+
+enum movimentacao_tipo {
+  ENTRADA
+  SAIDA
+}
+
+enum usuario_perfil {
+  ADMIN
+  FUNCIONARIO
+}

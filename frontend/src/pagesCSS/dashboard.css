@@ -1,0 +1,86 @@
+.dashboard-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER BRANCO */
+.dashboard-header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 2px solid #eee;
+}
+
+/* LOGO */
+.logo {
+  height: 80px;
+}
+
+/* CONTEÚDO VERDE CLARO */
+.dashboard-main {
+  flex: 1;
+  background-color: #a8e6cf;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* BOTÕES GRANDES (CARDS) */
+.menu-botoes {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-botoes button {
+  flex: 1;
+  padding: 25px;
+  font-size: 18px;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: white;
+  color: #00b894;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-botoes button:hover {
+  transform: scale(1.05);
+  background-color: #00b894;
+  color: white;
+}
+
+/* ALERTAS (ESTRUTURA VAZIA POR ENQUANTO) */
+.alertas {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 120px;
+}
+
+/* BOTÃO SAIR */
+.btn-sair {
+  align-self: flex-start;
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.dashboard-footer {
+  background-color: #00695c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

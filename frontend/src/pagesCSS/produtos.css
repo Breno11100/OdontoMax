@@ -1,0 +1,300 @@
+.produtos-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.produtos-header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 2px solid #eee;
+}
+
+.logo {
+  height: 70px;
+}
+
+/* MAIN */
+.produtos-main {
+  flex: 1;
+  background-color: #a8e6cf;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* LISTA DE PRODUTOS */
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* CARD DO PRODUTO */
+.produto-card {
+  background-color: #f1f2f6;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px;
+}
+
+/* imagem menor */
+.produto-img {
+  width: 60px;
+  height: 60px;
+  background-color: #dcdde1;
+  border-radius: 8px;
+}
+
+/* info mais compacta */
+.produto-info {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  font-size: 13px;
+}
+
+.produto-info p {
+  margin: 0;
+}
+
+/* BOTÃO */
+.btn-atualizar {
+  background-color: #00b894;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* AÇÕES INFERIORES */
+.produtos-acoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.acoes-direita {
+  display: flex;
+  gap: 10px;
+}
+
+/* BOTÃO BASE */
+.btn-nav {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* DASHBOARD */
+.btn-nav {
+  background-color: white;
+  color: #333;
+}
+
+/* ADICIONAR */
+.btn-add {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+}
+
+/* MOVIMENTAÇÃO */
+.btn-mov {
+  background: linear-gradient(135deg, #0984e3, #74b9ff);
+  color: white;
+}
+
+/* HOVER */
+.btn-nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+.produtos-footer {
+  background-color: #00695c;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* AÇÕES DO PRODUTO */
+.acoes-produto {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+/* BOTÃO EXCLUIR */
+.btn-excluir {
+  background-color: #d63031;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.produto-nome {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.produto-topo {
+  margin-bottom: 10px;
+}
+
+.produto-dados {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/*Modal*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.modal {
+  background-color: #ffffff;
+  width: 360px;
+  max-width: 90%;
+
+  padding: 25px;
+  border-radius: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  animation: modalFade 0.25s ease;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #222;
+}
+
+.input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+  border: 1px solid #dcdde1;
+
+  font-size: 14px;
+  color: #2f3640;
+
+  background-color: #f9f9f9;
+
+  outline: none;
+
+  transition: all 0.25s ease;
+
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.input:focus {
+  border-color: #00b894;
+  background-color: #ffffff;
+
+  box-shadow: 0 0 8px rgba(0, 184, 148, 0.25);
+
+  transform: scale(1.01);
+}
+
+.modal label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.modal-acoes button {
+  flex: 1;
+
+  padding: 10px 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn-cancelar {
+  background-color: #ff0000;
+  color: rgb(255, 0, 0);
+  transition: 0.2s;
+}
+
+.btn-cancelar:hover {
+  background-color: red !important;
+  transform: scale(1.03);
+}
+
+.btn-confirmar {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+}
+
+.btn-confirmar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+select.input {
+  cursor: pointer;
+  appearance: none;
+
+  background-image: linear-gradient(45deg, transparent 50%, #00b894 50%),
+                    linear-gradient(135deg, #00b894 50%, transparent 50%);
+  background-position: calc(100% - 18px) center, calc(100% - 12px) center;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
